@@ -20,10 +20,10 @@ Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/tests/dbtests/dbtests.sh b/tests/dbtests/dbtests.sh
-index 9dcf738..e5d1058 100755
+index 00740d0..51afb11 100755
 --- a/tests/dbtests/dbtests.sh
 +++ b/tests/dbtests/dbtests.sh
-@@ -174,7 +174,8 @@ dbtest_main()
+@@ -176,7 +176,8 @@ dbtest_main()
        ${BINDIR}/dbtest -d $RONLY_DIR
      ret=$?
      if [ $ret -ne 46 ]; then
@@ -31,5 +31,5 @@ index 9dcf738..e5d1058 100755
 +      #html_failed "Dbtest r/w succeeded in a readonly directory $ret"
 +      html_passed "Skipping test known to be failing with sqlite 3.34.0: Dbtest r/w succeeded in a readonly directory $ret"
      else
-       html_passed "Dbtest r/w didn't work in an readonly dir $ret" 
+       html_passed "Dbtest r/w didn't work in an readonly dir $ret"
      fi
