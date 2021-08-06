@@ -1,7 +1,7 @@
 %global nspr_version 4.32
 Name:          nss
 Version:       3.69
-Release:       59
+Release:       60
 URL:           https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/
 Source0:       https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_69_RTM/src/nss-3.69.tar.gz
 Source1:       nss.pc.in
@@ -243,8 +243,11 @@ chmod 755 %{buildroot}/usr/bin/nss-config
 
 %check
 pushd tests
+export HOST=localhost
+export DOMSUF=localdomain
 export USE_64=1
-HOST=127.0.0.1  bash ./all.sh
+export NSS_CYCLES=standard
+bash ./all.sh
 popd
 
 %clean
