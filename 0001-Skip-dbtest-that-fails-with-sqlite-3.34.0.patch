@@ -9,6 +9,10 @@ updated sqlite to 3.34.0. Skip it for now.
 [2021-05-14]: An upstream bug report was filed on 2021-02-02 that contains more
               detail on the underlying problem:
               https://bugzilla.mozilla.org/show_bug.cgi?id=1690232
+[2021-08-05]: Another bug report was filed on 2021-06-06 for the same issue,
+              but it specifically calls out this test case and identifies (via
+              bisect) the sqlite3 revision that introduces the new behavior:
+              https://bugzilla.mozilla.org/show_bug.cgi?id=1714874
 
 Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
 ---
