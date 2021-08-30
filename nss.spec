@@ -28,8 +28,6 @@ Requires:      nss-bin
 Requires:      nspr >= %{nspr_version}
 Requires:      p11-kit
 
-Patch1: 0001-Skip-dbtest-that-fails-with-sqlite-3.34.0.patch
-
 %description
 Network Security Services (NSS) is a set of libraries designed
 to support cross-platform development of security-enabled server
@@ -90,7 +88,6 @@ applications that use NSS.
 
 %prep
 %setup -q -n nss-%{version}/nss
-%patch1 -p1
 pushd ..
 cp -a nss build32
 popd
