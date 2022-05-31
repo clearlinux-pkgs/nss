@@ -244,7 +244,10 @@ export HOST=localhost
 export DOMSUF=localdomain
 export USE_64=1
 export NSS_CYCLES=standard
-bash ./all.sh
+# The standard cycle takes roughly one hour to complete... Skip tests for now
+# until we can improve that runtime, by introducing more parallelization, running
+# an appropriate subset of the "standard" test cycle, etc.
+#bash ./all.sh
 popd
 
 %clean
