@@ -253,6 +253,10 @@ popd
 %clean
 rm -fr %{buildroot}
 
+%files
+%defattr(-,root,root,-)
+
+
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libnss3.so
